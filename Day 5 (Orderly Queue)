@@ -23,3 +23,26 @@ Constraints:
 s consist of lowercase English letters.
 
 
+C++ Code:
+
+class Solution {
+public:
+    string orderlyQueue(string s, int k) {
+        if(k>1){
+            sort(s.begin(),s.end());
+            return s;
+        }
+        char m = 'z';
+        for(char c:s)
+            m = min(m,c);
+        vector<string> v;
+        int n = s.size();
+        for(int i=0;i<n;i++)
+        {
+            if(s[i]==m)
+                v.push_back(s.substr(i,n)+s.substr(0,i));
+        }
+        sort(v.begin(),v.end());
+        return v[0];
+    }
+};

@@ -45,3 +45,28 @@ Constraints:
   1 <= releaseTimes[i] <= 109
   releaseTimes[i] < releaseTimes[i+1]
   keysPressed contains only lowercase English letters.
+
+
+C++ Code:
+
+class Solution {
+public:
+    char slowestKey(vector<int>& releaseTimes, string keysPressed) {
+        vector<int> characters(26,0);
+        characters[keysPressed[0]-97]=releaseTimes[0];
+        int n = releaseTimes.size();
+        for(int i=1;i<n;i++){
+            int index = keysPressed[i]-97;
+            characters[index] = max(characters[index],releaseTimes[i]-releaseTimes[i-1]);
+        }
+        int ans = 0, max_presses = 0;
+        for(int i=0;i<26;i++)
+        {
+            if(characters[i]>=max_presses){
+                max_presses = characters[i];
+                ans = i;
+            }
+        }
+        return ans+97;
+    }
+};

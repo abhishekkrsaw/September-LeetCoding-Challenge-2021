@@ -19,3 +19,22 @@ Constraints:
   -5000 <= Node.val <= 5000 
 
 Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
+
+C++ Code:
+
+Iterative Approach:
+
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        ListNode *curr=head, *prev=NULL, *temp=NULL;
+        while(curr)
+        {
+            temp = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = temp;
+        }
+        return prev;
+    }
+};

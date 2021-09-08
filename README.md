@@ -7,4 +7,5 @@ Day 2: https://leetcode.com/problems/unique-binary-search-trees-ii/
 Day 3: https://leetcode.com/problems/erect-the-fence/                                                                                                                               
 Day 4: https://leetcode.com/problems/sum-of-distances-in-tree/                                                                                                                    
 Day 5: https://leetcode.com/problems/orderly-queue/                                                                                                                                 
-Day 6: https://leetcode.com/problems/slowest-key/
+Day 6: https://leetcode.com/problems/slowest-key/                                                                                                                                   
+Day 7: https://leetcode.com/problems/reverse-linked-list/

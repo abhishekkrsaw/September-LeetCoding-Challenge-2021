@@ -38,3 +38,19 @@ public:
         return prev;
     }
 };
+
+
+Recursive Approach:
+
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        if(!head || !head->next)
+            return head;
+        ListNode* next_node = head->next;
+        head->next = NULL;
+        ListNode* root = reverseList(next_node);
+        next_node->next = head;
+        return root;
+    }
+};

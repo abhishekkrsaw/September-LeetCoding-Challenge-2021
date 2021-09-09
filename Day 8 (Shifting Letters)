@@ -26,3 +26,25 @@ Constraints:
   s consists of lowercase English letters.
   shifts.length == s.length
   0 <= shifts[i] <= 109
+
+
+C++ Code:
+
+class Solution {
+public:
+    string shiftingLetters(string s, vector<int>& shifts) {
+        int n = shifts.size();
+        for(int i=n-2;i>=0;i--)
+            shifts[i] = (shifts[i]+shifts[i+1])%26;
+        string ans = "";
+        for(int i=0;i<n;i++)
+        {
+            shifts[i]%=26;    // doing again for case when only 1 element is present
+            int c = s[i]+shifts[i];
+            if(c>122)
+                c-=26;
+            ans+=c;
+        }
+        return ans;
+    }
+};

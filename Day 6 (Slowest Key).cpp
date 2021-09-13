@@ -1,3 +1,4 @@
+/*
 Question Link -> https://leetcode.com/problems/slowest-key/
 
 A newly designed keypad was tested, where a tester pressed a sequence of n keys, one at a time.
@@ -45,9 +46,10 @@ Constraints:
   1 <= releaseTimes[i] <= 109
   releaseTimes[i] < releaseTimes[i+1]
   keysPressed contains only lowercase English letters.
+  */
 
 
-C++ Code:
+//C++ Code:
 
 class Solution {
 public:

@@ -1,3 +1,4 @@
+/*
 Question Link -> https://leetcode.com/problems/reverse-linked-list/
 
 Given the head of a singly linked list, reverse the list, and return the reversed list. 
@@ -19,10 +20,11 @@ Constraints:
   -5000 <= Node.val <= 5000 
 
 Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
+*/
 
-C++ Code:
+//C++ Code:
 
-Iterative Approach:
+//Iterative Approach:
 
 class Solution {
 public:
@@ -40,7 +42,7 @@ public:
 };
 
 
-Recursive Approach:
+//Recursive Approach:
 
 class Solution {
 public:

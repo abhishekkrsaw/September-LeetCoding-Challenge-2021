@@ -1,3 +1,4 @@
+/*
 Question Link -> https://leetcode.com/problems/shifting-letters/
 
 You are given a string s of lowercase English letters and an integer array shifts of the same length.
@@ -26,9 +27,10 @@ Constraints:
   s consists of lowercase English letters.
   shifts.length == s.length
   0 <= shifts[i] <= 109
+  */
 
 
-C++ Code:
+//C++ Code:
 
 class Solution {
 public:

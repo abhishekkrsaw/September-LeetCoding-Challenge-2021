@@ -1,3 +1,4 @@
+/*
 Question Link -> https://leetcode.com/problems/erect-the-fence/
 
 You are given an array trees where trees[i] = [xi, yi] represents the location of a tree in the garden.
@@ -17,9 +18,10 @@ Constraints:
 points[i].length == 2
 0 <= xi, yi <= 100
 All the given points are unique.
+*/
 
 
-C++ Code:
+//C++ Code:
 
 class Solution {
 public:

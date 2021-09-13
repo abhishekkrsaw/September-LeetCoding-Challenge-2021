@@ -1,3 +1,4 @@
+/*
 Question Link -> https://leetcode.com/problems/orderly-queue/
 
 You are given a string s and an integer k. You can choose one of the first k letters of s and append it at the end of the string..
@@ -21,9 +22,10 @@ In the second move, we move the 3rd character 'c' to the end, obtaining the fina
 Constraints:
 1 <= k <= s.length <= 1000
 s consist of lowercase English letters.
+*/
 
 
-C++ Code:
+//C++ Code:
 
 class Solution {
 public:

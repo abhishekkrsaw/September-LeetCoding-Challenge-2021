@@ -1,5 +1,6 @@
 # September-LeetCoding-Challenge-2021
-My code for september leetcode daily challenges 2021
+My code for september leetcode daily challenges 2021.                                                                                                                               
+Below are the question links. It is highly recommended to try yourself first before moving to the solution.
 
 # Question Links:
 Day 1: https://leetcode.com/problems/array-nesting/                                                                                                                                 

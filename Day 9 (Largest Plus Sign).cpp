@@ -27,3 +27,36 @@ Constraints:
 */
 
 //C++ Code
+
+class Solution {
+public:
+    int orderOfLargestPlusSign(int n, vector<vector<int>>& mines) {
+        vector<vector<int>> grid(n,vector<int>(n,1));
+        for(auto cell:mines)
+            grid[cell[0]][cell[1]]=0;
+        vector<vector<int>> left(grid),right(grid),top(grid),bottom(grid);
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                if(j>0 && left[i][j]!=0)
+                    left[i][j]+=left[i][j-1];
+                
+                if(j>0 && top[j][i]!=0)
+                    top[j][i]+=top[j-1][i];
+                
+                if(n-j<n && right[i][n-1-j]!=0)
+                    right[i][n-1-j]+=right[i][n-j];
+             
+                if(n-j<n && bottom[n-1-j][i]!=0)
+                    bottom[n-1-j][i]+=bottom[n-j][i];
+            }
+        }
+        int ans = 0;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++)
+                ans = max(ans,min({left[i][j],right[i][j],top[i][j],bottom[i][j]}));
+        }
+        return ans;
+    }
+};

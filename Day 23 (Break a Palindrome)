@@ -37,3 +37,24 @@ Constraints:
 1 <= palindrome.length <= 1000
 palindrome consists of only lowercase English letters.
 */
+
+//C++ Code:
+
+class Solution {
+public:
+    string breakPalindrome(string palindrome) {
+        int n = palindrome.size();
+        if(n==1)
+            return "";
+        int i=0,j=n-1;
+        while(i<=j && palindrome[i]=='a'){
+            i++;
+            j--;
+        }
+        if(i<j)
+            palindrome.replace(i,1,"a");
+        else
+            palindrome.replace(n-1,1,"b");
+        return palindrome;
+    }
+};

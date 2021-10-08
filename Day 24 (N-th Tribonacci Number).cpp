@@ -22,3 +22,16 @@ Constraints:
 0 <= n <= 37
 The answer is guaranteed to fit within a 32-bit integer, ie. answer <= 2^31 - 1.
 */
+
+//C++ Code
+
+class Solution {
+public:
+    int tribonacci(int n) {
+        vector<int> ans(n+1,1);
+        ans[0]=0;
+        for(int i=3;i<=n;i++)
+            ans[i]=ans[i-1]+ans[i-2]+ans[i-3];
+        return ans[n];
+    }
+};
